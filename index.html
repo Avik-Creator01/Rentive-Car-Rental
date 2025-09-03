@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rentive Car Rental</title>
+    <!---------- Font Awesome CDN ---------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!---------- Link Swiper's CSS ---------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!---------- CSS File Link ---------->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!---------- Header Section ---------->
+
+    <header class="header">
+      <div class="container-fluid">
+        <div class="container">
+          <nav class="navbox">
+            <div class="logo">
+              <a href="index.html">
+                <img src="image/Header Logo.png" alt="Logo" loading="lazy" />
+              </a>
+            </div>
+            <ul class="navlist" id="navlist">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Vehicles</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="user">
+              <a href="#"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="menu" id="menu">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!---------- Banner Section ---------->
+
+      <section class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col50" id="left">
+              <div class="banner-text">
+                <h1>Looking for a vehicle?</h1>
+                <p>You're in the perfect spot.</p>
+              </div>
+            </div>
+            <div class="col50">
+              <div class="search-box">
+                <div class="h5-title">Drive anywhere anytime with</div>
+                <div class="h4-title">
+                  Self-drive car rentals in
+                  <span id="selected-city">Kolkata</span>
+                  <a href="#" class="dropdown-btn">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                </div>
+                <div class="dropdown-list">
+                  <a href="#" class="dropdown-item">Kolkata</a>
+                  <a href="#" class="dropdown-item">Mumbai</a>
+                  <a href="#" class="dropdown-item">Delhi</a>
+                  <a href="#" class="dropdown-item">Bangalore</a>
+                  <a href="#" class="dropdown-item">Hyderabad</a>
+                </div>
+                <form id="rentalForm">
+                  <div class="form-group">
+                    <label for="location">Location</label>
+                    <div class="info">
+                      <input
+                        type="text"
+                        id="location"
+                        placeholder="Sector 5, Salt Lake, Kolkata"
+                      />
+                      <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+                    <div class="error" id="locationError"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col50">
+                      <div class="form-group">
+                        <label for="startDate">Trip Starts</label>
+                        <div class="info">
+                          <input type="date" id="startDate" />
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <div class="error" id="startError"></div>
+                      </div>
+                    </div>
+                    <div class="col50">
+                      <div class="form-group">
+                        <label for="endDate">Trip Ends</label>
+                        <div class="info">
+                          <input type="date" id="endDate" />
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <div class="error" id="endError"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="car-image">
+            <img src="image/Car Image.png" alt="Car" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!---------- About Section ---------->
+
+      <section class="about-us">
+        <div class="container">
+          <div class="row">
+            <div class="col50">
+              <div class="h5-title">About Us</div>
+              <div class="h2-title">
+                The Largest Car Rental Network Across the Globe
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in volupt
+              </p>
+              <a href="#" class="read-btn">Read More</a>
+            </div>
+            <div class="col25">
+              <img src="image/car image 1.png" alt="Car 1" class="image-box1" />
+            </div>
+            <div class="col25">
+              <div class="exp-box">
+                <div class="h2-title">10+ Years</div>
+                <div class="h6-title">EXPERIENCE</div>
+              </div>
+              <img src="image/car image 2.png" alt="Car 2" class="image-box2" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Brands Row ---------->
+
+      <div class="brand-logo">
+        <div class="container">
+          <div class="slider" id="slider">
+            <div class="slide1">
+              <img src="image/lexus brand logo.png" alt="Lexus" />
+            </div>
+            <div class="slide">
+              <img src="image/mer brand logo.png" alt="Mercedes" />
+            </div>
+            <div class="slide">
+              <img src="image/jaguar brand logo.png" alt="Jaguar" />
+            </div>
+            <div class="slide">
+              <img src="image/bugatti brand logo.png" alt="Bugatti" />
+            </div>
+            <div class="slide">
+              <img src="image/honda brand logo.png" alt="Honda" />
+            </div>
+            <div class="slide">
+              <img src="image/chevrolet brand logo.png" alt="Chevrolet" />
+            </div>
+            <div class="slide">
+              <img src="image/acura brand logo.png" alt="Acura" />
+            </div>
+            <div class="slide">
+              <img src="image/bmw brand logo.png" alt="BMW" />
+            </div>
+            <div class="slide">
+              <img src="image/toyota brand logo.png" alt="Toyota" />
+            </div>
+
+            <!-- duplicate for infinite effect -->
+
+            <div class="slide1">
+              <img src="image/lexus brand logo.png" alt="Lexus" />
+            </div>
+            <div class="slide">
+              <img src="image/mer brand logo.png" alt="Mercedes" />
+            </div>
+            <div class="slide">
+              <img src="image/jaguar brand logo.png" alt="Jaguar" />
+            </div>
+            <div class="slide">
+              <img src="image/bugatti brand logo.png" alt="Bugatti" />
+            </div>
+            <div class="slide">
+              <img src="image/honda brand logo.png" alt="Honda" />
+            </div>
+            <div class="slide">
+              <img src="image/chevrolet brand logo.png" alt="Chevrolet" />
+            </div>
+            <div class="slide">
+              <img src="image/acura brand logo.png" alt="Acura" />
+            </div>
+            <div class="slide">
+              <img src="image/bmw brand logo.png" alt="BMW" />
+            </div>
+            <div class="slide">
+              <img src="image/toyota brand logo.png" alt="Toyota" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------- Collections Row ---------->
+
+      <section class="collections">
+        <div class="container">
+          <div class="h5-title">Our collections</div>
+          <div class="h2-title">Explore Our Top-Rated Vehicles</div>
+
+          <!---------- Swiper ---------->
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="car-details">
+                  <div class="h6-title">Rolls Royce Phantom SWB</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="car-img">
+                    <img
+                      src="image/Rolls-Royce-Phantom.png"
+                      alt="Rolls Royce"
+                    />
+                  </div>
+                  <p>
+                    Rolls Royce Phantom SWB is a luxurious and opulent of design
+                    and speed.
+                  </p>
+                  <div class="price">
+                    <span class="currency">$</span>20 <span class="unit">/ per hour</span>
+                  </div>
+                  <a href="#" class="button">More Details</a>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="car-details">
+                  <div class="h6-title">Lamborghini Revuelto SWB</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="car-img">
+                    <img
+                      src="image/Lamborghini-Revuelto.png"
+                      alt="Lamborghini"
+                    />
+                  </div>
+                  <p>
+                    The Lamborghini Aventador SWB is a masterpiece of design and
+                    speed.
+                  </p>
+                  <div class="price">
+                    <span class="currency">$</span>20 <span class="unit">/ per hour</span>
+                  </div>
+                  <a href="#" class="button">More Details</a>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="car-details">
+                  <div class="h6-title">Audi SQ7 Quattro</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="car-img">
+                    <img src="image/Audi-SQ7-Quattro.png" alt="audi" />
+                  </div>
+                  <p>
+                    The Audi SQ7 Quattro SWB is a luxurious SUV offering comfort
+                    and technology.
+                  </p>
+                  <div class="price">
+                    <span class="currency">$</span>20 <span class="unit">/ per hour</span>
+                  </div>
+                  <a href="#" class="button">More Details</a>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div class="car-details">
+                  <div class="h6-title">Rolls Royce Phantom SWB</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="car-img">
+                    <img
+                      src="image/Rolls-Royce-Phantom.png"
+                      alt="Rolls Royce"
+                    />
+                  </div>
+                  <p>
+                    Rolls Royce Phantom SWB is a luxurious and opulent of design
+                    and speed.
+                  </p>
+                  <div class="price">
+                    <span class="currency">$</span>20 <span class="unit">/ per hour</span>
+                  </div>
+                  <a href="#" class="button">More Details</a>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="swiper-slide">
+                <div class="car-details">
+                  <div class="h6-title">Lamborghini Revuelto SWB</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="car-img">
+                    <img
+                      src="image/Lamborghini-Revuelto.png"
+                      alt="Lamborghini"
+                    />
+                  </div>
+                  <p>
+                    The Lamborghini Aventador SWB is a masterpiece of design and
+                    speed.
+                  </p>
+                  <div class="price">
+                    <span class="currency">$</span>20 <span class="unit">/ per hour</span>
+                  </div>
+                  <a href="#" class="button">More Details</a>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="swiper-slide">
+                <div class="car-details">
+                  <div class="h6-title">Audi SQ7 Quattro</div>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="car-img">
+                    <img src="image/Audi-SQ7-Quattro.png" alt="audi" />
+                  </div>
+                  <p>
+                    The Audi SQ7 Quattro SWB is a luxurious SUV offering comfort
+                    and technology.
+                  </p>
+                  <div class="price">
+                    <span class="currency">$</span>20 <span class="unit">/ per hour</span>
+                  </div>
+                  <a href="#" class="button">More Details</a>
+                </div>
+              </div>
+            </div>
+
+            <!---------- Navigation Arrows ---------->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Advantage Section ---------->
+
+      <section class="advantage">
+        <div class="container">
+          <div class="h5-title">Why choose us</div>
+          <div class="h2-title">The Advantage of Renting with Us</div>
+
+          <div class="content">
+            <div class="row">
+              <div class="col33 left">
+                <div class="card">
+                  <span>Diverse Fleet</span>
+                  <p>A wide range of cars for all needs.</p>
+                </div>
+                <div class="card">
+                  <span>Affordable Rates</span>
+                  <p>Competitive pricing with no hidden fees.</p>
+                </div>
+                <div class="card">
+                  <span>Flexible Rentals</span>
+                  <p>Daily, weekly, and long-term options available.</p>
+                </div>
+              </div>
+
+              <div class="col33">
+                <div class="image-box">
+                  <img
+                    src="image/advantage-img 1.png"
+                    alt="Buildings"
+                    class="bg"
+                  />
+                  <img
+                    src="image/car advantage img.png"
+                    alt="Car"
+                    class="car"
+                  />
+                </div>
+              </div>
+
+              <div class="col33 right">
+                <div class="card">
+                  <span>24/7 Support</span>
+                  <p>Always available to assist you anytime.</p>
+                </div>
+                <div class="card">
+                  <span>Safety First</span>
+                  <p>All cars are inspected for your safety.</p>
+                </div>
+                <div class="card">
+                  <span>Loyalty Rewards</span>
+                  <p>Earn exclusive discounts and special offers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Services Row ---------->
+
+      <section class="services">
+        <div class="container">
+          <div class="h5-title">What we offer</div>
+          <div class="h2-title">Explore Our Services</div>
+
+          <div class="row">
+            <!-- Service 1 -->
+            <div class="col25">
+              <div class="service-card">
+                <div class="service-icon"><i class="fas fa-road"></i></div>
+                <div class="h6-title">One-way Rentals</div>
+                <p>
+                  Experience hassle-free rentals, premium service, and a wide
+                  selection of vehicles.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col25">
+              <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-car"></i></div>
+                <div class="h6-title">Airport Transfers</div>
+                <p>
+                  Experience hassle-free rentals, premium service, and a wide
+                  selection of vehicles.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col25">
+              <div class="service-card">
+                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                <div class="h6-title">Corporate Rentals</div>
+                <p>
+                  Experience hassle-free rentals, premium service, and a wide
+                  selection of vehicles.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="col25">
+              <div class="service-card">
+                <div class="service-icon">
+                  <i class="fa-solid fa-car-side"></i>
+                </div>
+                <div class="h6-title">Chauffeur Service</div>
+                <p>
+                  Experience hassle-free rentals, premium service, and a wide
+                  selection of vehicles.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <a href="#" class="service-btn">All Services</a>
+      </section>
+
+      <!---------- Booking Section ---------->
+
+      <section class="booking">
+        <div class="container">
+          <div class="h5-title">How it Work</div>
+          <div class="h2-title">4 Quick Steps to Book Your Vehicle</div>
+          <div class="steps-line">
+            <img src="image/road map.png" alt="Steps Line" class="line-image" />
+            <div class="steps">
+              <div class="step">
+                <div class="icon-circle">
+                  <a href="#"><i class="fa-solid fa-calendar-days"></i></a>
+                </div>
+                <div class="step-number">1</div>
+                <div class="step-desc">Select City & Travel dates</div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-desc">Choose Car & Delivery Mode</div>
+                <div class="icon-circle">
+                  <a href="#"><i class="fa-solid fa-car"></i></a>
+                </div>
+              </div>
+              <div class="step">
+                <div class="icon-circle">
+                  <a href="#"><i class="fa-solid fa-id-card"></i></a>
+                </div>
+                <div class="step-number">3</div>
+                <div class="step-desc">Verify Yourself</div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-desc">Make Payment</div>
+                <div class="icon-circle">
+                  <a href="#"><i class="fa-solid fa-money-bill-wave"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Testimonial Section ---------->
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="h5-title">Testimonials</div>
+          <div class="h2-title">What they say about us?</div>
+
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="h5-title">Best Price Assured</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum is a dummy car placeholder text commonly used in
+                  graphic design, publishing, and web development to fill empty
+                  spaces in a layout that does not yet have content.
+                </p>
+                <div class="h6-title">TITHI, KOLKATA</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="h5-title">Smooth Car Transport</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum is a dummy car placeholder text commonly used in
+                  graphic design, publishing, and web development to fill empty
+                  spaces in a layout that does not yet have content.
+                </p>
+                <div class="h6-title">TITHI, KOLKATA</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="h5-title">Clean and Comfortable</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum is a dummy car placeholder text commonly used in
+                  graphic design, publishing, and web development to fill empty
+                  spaces in a layout that does not yet have content.
+                </p>
+                <div class="h6-title">TITHI, KOLKATA</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="h5-title">Best Price Assured</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum is a dummy car placeholder text commonly used in
+                  graphic design, publishing, and web development to fill empty
+                  spaces in a layout that does not yet have content.
+                </p>
+                <div class="h6-title">TITHI, KOLKATA</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="h5-title">Smooth Car Transport</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum is a dummy car placeholder text commonly used in
+                  graphic design, publishing, and web development to fill empty
+                  spaces in a layout that does not yet have content.
+                </p>
+                <div class="h6-title">TITHI, KOLKATA</div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="h5-title">Clean and Comfortable</div>
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>
+                  Lorem ipsum is a dummy car placeholder text commonly used in
+                  graphic design, publishing, and web development to fill empty
+                  spaces in a layout that does not yet have content.
+                </p>
+                <div class="h6-title">TITHI, KOLKATA</div>
+              </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Book Car Section ---------->
+
+      <section class="book-car">
+        <div class="container">
+          <div class="row">
+            <div class="col40">
+              <div class="car-box">
+                <div class="h3-title">Book a car</div>
+                <p>
+                  Experience a smooth and stylish ride, making every journey
+                  comfortable and safe.
+                </p>
+                <div class="contact">
+                  <a href="#" class="btn-gold">Book Now</a>
+                  <a href="#" class="btn-outline">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col60">
+              <div class="explore-box">
+                <div class="h3-title">Explore cars</div>
+                <p>Making every journey comfortable and elegant.</p>
+                <a href="#" class="btn-dark">Our Cars</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Blog Section ---------->
+
+      <section class="blog">
+        <div class="container">
+          <div class="blog-header">
+            <div class="h5-title">Our Blog</div>
+            <div class="h2-title">
+              Stay informed and inspired for your next journey
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col50">
+              <div class="big-card">
+                <img src="image/main car.png" alt="Car" />
+                <div class="big-card-content">
+                  <span><i class="fas fa-calendar-alt"></i> March 5, 2025</span>
+                  <div class="h5-title">
+                    Top tips for booking your car rental: what you need to know
+                  </div>
+                  <img src="image/arrow.png" alt="arrow" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col50">
+              <div class="small-cards">
+                <div class="small-card">
+                  <img src="image/right img 1.png" alt="Car" />
+                  <div class="small-card-content">
+                    <span
+                      ><i class="fas fa-calendar-alt"></i> March 5, 2025</span
+                    >
+                    <p>
+                      Exploring your rental car options: sedan, suv, or
+                      convertible?
+                    </p>
+                    <img src="image/arrow.png" alt="arrow" />
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="image/right img 2.png" alt="Car" />
+                  <div class="small-card-content">
+                    <span
+                      ><i class="fas fa-calendar-alt"></i> March 5, 2025</span
+                    >
+                    <p>
+                      Exploring your rental car options: sedan, suv, or
+                      convertible?
+                    </p>
+                    <img src="image/arrow.png" alt="arrow" />
+                  </div>
+                </div>
+
+                <div class="small-card">
+                  <img src="image/right img 3.png" alt="Car" />
+                  <div class="small-card-content">
+                    <span
+                      ><i class="fas fa-calendar-alt"></i> March 5, 2025</span
+                    >
+                    <p>
+                      Exploring your rental car options: sedan, suv, or
+                      convertible?
+                    </p>
+                    <img src="image/arrow.png" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---------- Host Section ---------->
+
+      <section class="host">
+        <div class="container">
+          <div class="row">
+            <div class="col50 left">
+              <span>Become a</span>
+              <p>Host</p>
+              <div class="h5-title">Start your business with Rentive!</div>
+              <a href="#" class="btn">Join Now</a>
+            </div>
+
+            <div class="col50 right">
+              <img src="image/women.png" alt="Woman" class="woman" />
+              <img src="image/host car.png" alt="Car" class="car" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!---------- Footer Section ---------->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col40">
+            <div class="logo">
+              <a href="index.html">
+                <img src="image/Header Logo.png" alt="Logo" loading="lazy" />
+              </a>
+            </div>
+            <p>
+              Experience the ease and convenience of renting a car with Rentive.
+            </p>
+            <div class="h5-title">Follow Us</div>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="https://www.linkedin.com/" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col20">
+            <div class="h5-title">Legal Policy</div>
+            <ul>
+              <li>
+                <i class="fa-solid fa-angle-right"></i
+                ><a href="#">Term & Condition</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i
+                ><a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i
+                ><a href="#">Legal Notice</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i
+                ><a href="#">Accessibility</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col20">
+            <div class="h5-title">Quick Links</div>
+            <ul>
+              <li>
+                <i class="fa-solid fa-angle-right"></i><a href="#">Home</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i><a href="#">About Us</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i><a href="#">Vehicles</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i><a href="#">Service</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i><a href="#">Blog</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-angle-right"></i
+                ><a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col20">
+            <div class="h5-title">Contact Us</div>
+            <ul>
+              <li>
+                <i class="fa-solid fa-location-arrow"></i>
+                <a href="#">6710, Kazipur, Sirajganj</a>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:-880 123 556 7890">-880 123 556 7890</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@rentivecarrental.com"
+                  >info@rentivecarrental.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!----------Javascript File Link ---------->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!---------- Toggle Bar Javascript ---------->
+
+    <script>
+      const menu = document.getElementById("menu");
+      const navlist = document.getElementById("navlist");
+
+      menu.addEventListener("click", () => {
+        navlist.classList.toggle("active");
+      });
+    </script>
+
+    <!---------- Form Validation Javascript ---------->
+
+    <script>
+      const form = document.getElementById("rentalForm");
+      const locationInput = document.getElementById("location");
+      const startInput = document.getElementById("startDate");
+      const endInput = document.getElementById("endDate");
+
+      const locError = document.getElementById("locationError");
+      const startError = document.getElementById("startError");
+      const endError = document.getElementById("endError");
+
+      function showError(element, message) {
+        element.textContent = message;
+        element.style.display = "block";
+      }
+
+      function hideError(element) {
+        element.textContent = "";
+        element.style.display = "none";
+      }
+
+      function validateForm() {
+        let valid = true;
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const startDate = startInput.value ? new Date(startInput.value) : null;
+        const endDate = endInput.value ? new Date(endInput.value) : null;
+
+        if (!locationInput.value.trim()) {
+          showError(locError, "Please enter location.");
+          valid = false;
+        } else {
+          hideError(locError);
+        }
+
+        if (!startDate) {
+          showError(startError, "Please select start date.");
+          valid = false;
+        } else if (startDate < today) {
+          showError(startError, "Start date cannot be in the past.");
+          valid = false;
+        } else {
+          hideError(startError);
+        }
+
+        if (!endDate) {
+          showError(endError, "Please select end date.");
+          valid = false;
+        } else if (startDate && endDate <= startDate) {
+          showError(endError, "End date must be after start date.");
+          valid = false;
+        } else {
+          hideError(endError);
+        }
+
+        return valid;
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (validateForm()) {
+          alert(
+            `Searching cars...\nLocation: ${locationInput.value}\nFrom: ${startInput.value}\nTo: ${endInput.value}`
+          );
+        }
+      });
+    </script>
+
+    <!---------- Drop-Down Javascript ---------->
+
+    <script>
+      const btn = document.querySelector(".dropdown-btn");
+      const list = document.querySelector(".dropdown-list");
+      const items = document.querySelectorAll(".dropdown-item");
+      const selected = document.getElementById("selected-city");
+
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        list.classList.toggle("open");
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          selected.textContent = item.textContent.trim();
+          list.classList.remove("open");
+        });
+      });
+
+      document.addEventListener("click", () => list.classList.remove("open"));
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") list.classList.remove("open");
+      });
+    </script>
+
+    <!---------- Swiper JS ---------->
+
+    <script>
+      var swiper = new Swiper(".collections .swiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 3,
+        spaceBetween: 30,
+      });
+    </script>
+
+    <!---------- Swiper JS For Testimonials---------->
+
+    <script>
+      var swiper = new Swiper(".testimonials .mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: { slidesPerView: 1, centeredSlides: false },
+          768: { slidesPerView: 2, centeredSlides: false },
+          991: { slidesPerView: 3, centeredSlides: true },
+        },
+      });
+    </script>
+  </body>
+</html>

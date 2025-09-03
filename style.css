@@ -1,0 +1,2025 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --col-gold: #a7893b;
+  --col-gold-light: #cca848;
+  --col-dark: #161c1d;
+  --col-black: #000000;
+  --col-gray: #908f8e;
+  --col-gray-light: #c4c3c0;
+  --col-gray-mid: #6d6d6d;
+  --col-white: #ffffff;
+  --col-offwhite: #f6f5f1;
+  --col-lightblack: #161616;
+  --col-slide: #424242;
+  --col-host: #686868;
+  --col-yellow: #f1bb2b;
+  --col-banner-bg: #273234;
+  --col-footer-bg: #161c1d;
+  --col-card-bg: #f6f5f1;
+}
+
+@font-face {
+  font-family: Inknut Antiqua;
+  src: url(fonts/Inknut_Antiqua/InknutAntiqua-Regular.ttf);
+}
+
+@font-face {
+  font-family: DM Sans;
+  src: url(fonts/DM_Sans/DMSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: FSP Demo;
+  src: url(fonts/Demo_Fonts/Fontspring-DEMO-mersin-regular.otf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(fonts/Inter/Inter-VariableFont_opsz\wght.ttf);
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.46;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--col-white);
+}
+
+h2,
+.h2-title {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--col-white);
+}
+
+h3,
+.h3-title {
+  font-size: 34px;
+  font-weight: 400;
+  color: var(--col-white);
+}
+
+h4,
+.h4-title {
+  font-size: 27px;
+  font-weight: 400;
+  color: var(--col-white);
+}
+
+h5,
+.h5-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--col-white);
+}
+
+h6,
+.h6-title {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--col-white);
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col60 {
+  max-width: 60%;
+  flex: 0 0 60%;
+  padding: 0 15px;
+}
+
+.col50 {
+  max-width: 50%;
+  flex: 0 0 50%;
+  padding: 0 15px;
+}
+
+.col40 {
+  max-width: 40%;
+  flex: 0 0 40%;
+  padding: 0 15px;
+}
+
+.col33 {
+  max-width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+}
+
+.col30 {
+  max-width: 30%;
+  flex: 0 0 30%;
+  padding: 0 15px;
+}
+
+.col25 {
+  max-width: 25%;
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+
+.col20 {
+  max-width: 20%;
+  flex: 0 0 20%;
+  padding: 0 15px;
+}
+
+/*===============Navbar Section===============*/
+
+header {
+  width: 100%;
+  font-family: Inknut Antiqua;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px 0;
+}
+
+header .container-fluid {
+  border-bottom-color: var(--col-gray);
+  border-bottom: 2px solid var(--col-gray);
+}
+
+.navbox .logo a {
+  display: block;
+  width: 150px;
+}
+
+.navbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+}
+
+.navlist li {
+  margin: 0 15px;
+}
+
+.navbox ul li a {
+  color: var(--col-white);
+  font-size: 14px;
+  transition: 0.3s ease all;
+}
+
+.navbox ul li a:hover {
+  color: var(--col-gold-light);
+}
+
+.navbox ul li {
+  transition: 0.3s ease all;
+}
+
+.navbox ul li:hover {
+  transform: translateY(-5px);
+}
+
+.user i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  color: var(--col-black);
+  background: var(--col-yellow);
+  border-radius: 50%;
+  transition: 0.3s ease all;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user i:hover {
+  color: var(--col-white);
+  transform: translateY(-5px);
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--col-white);
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/*===============Banner Section===============*/
+
+.banner {
+  width: 100%;
+  min-height: 825px;
+  background: url("image/Banner\ Back.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-text .h1-title {
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-family: DM Sans;
+}
+
+.banner-text p {
+  font-size: 27px;
+  color: #e5e5e5;
+  font-family: Inknut Antiqua;
+}
+
+/*===============Search Box===============*/
+
+.search-box {
+  position: relative;
+  background: var(--col-banner-bg);
+  border: 2px solid var(--col-gold);
+  padding: 45px 15px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.search-box .h5-title {
+  color: var(--col-white);
+  font-family: DM Sans;
+}
+
+.search-box .h4-title {
+  color: var(--col-white);
+  font-family: Inknut Antiqua;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.search-box span {
+  font-size: 27px;
+  color: var(--col-gold-light);
+  font-weight: 100;
+  font-family: FSP Demo;
+}
+
+.dropdown-btn {
+  font-size: 20px;
+  color: var(--col-gold-light);
+  cursor: pointer;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: var(--col-gold);
+  min-width: 180px;
+  text-align: center;
+  z-index: 999;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--col-white);
+  border-bottom: 1px solid var(--col-banner-bg);
+  transition: 0.8s ease all;
+}
+
+.dropdown-item:hover {
+  background: var(--col-white);
+  color: var(--col-gold);
+}
+
+.dropdown-list.open {
+  display: block;
+}
+
+.form-group {
+  background: transparent;
+  border: 2px solid var(--col-gray);
+  border-radius: 15px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 13px;
+  display: block;
+  color: var(--col-gray-light);
+  margin-bottom: 4px;
+  font-family: Inter;
+}
+
+.form-group .info {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: var(--col-white);
+  font-family: Inter;
+  padding-right: 10px;
+  z-index: 2;
+  opacity: 0.2;
+}
+
+.form-group .info i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-80%);
+  color: var(--col-gold);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.error {
+  color: var(--col-gold);
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.banner .btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--col-gold-light);
+  color: var(--col-white);
+  font-size: 16px;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Inknut Antiqua;
+  transition: all 0.3s ease;
+}
+
+.banner .btn:hover {
+  background: var(--col-white);
+  color: var(--col-gold-light);
+}
+
+/*===============Car Image===============*/
+.car-image img {
+  position: absolute;
+  width: 100%;
+  max-width: 1437px;
+  left: 0;
+  margin-top: 50px;
+}
+
+/*===============About US Section===============*/
+
+.about-us {
+  width: 100%;
+  background: var(--col-white);
+  margin-top: 240px;
+}
+
+.about-us .col50 .h5-title {
+  color: var(--col-gold);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-family: DM Sans;
+  font-weight: 800;
+}
+
+.about-us .col50 .h2-title {
+  color: var(--col-black);
+  margin-bottom: 30px;
+  line-height: 1;
+  font-family: FSP Demo;
+}
+
+.about-us .col50 p {
+  color: var(--col-gray-mid);
+  margin-bottom: 20px;
+  font-family: Inter;
+}
+
+.about-us .col50 .read-btn {
+  display: inline-block;
+  padding: 25px 20px;
+  background: var(--col-gold);
+  color: var(--col-white);
+  font-family: Inknut Antiqua;
+  text-transform: uppercase;
+  border-radius: 15px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.about-us .col50 .read-btn:hover {
+  background: var(--col-yellow);
+  color: var(--col-white);
+}
+
+.exp-box .h2-title {
+  color: var(--col-white);
+  font-family: Inknut Antiqua;
+}
+
+.exp-box .h6-title {
+  color: var(--col-white);
+  font-family: Inknut Antiqua;
+}
+
+.image-box1 {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.image-box2 {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.image-box1,
+.image-box2 {
+  transition: transform 0.3s ease;
+}
+
+.image-box1:hover,
+.image-box2:hover {
+  transform: scale(1.05);
+}
+
+.exp-box {
+  background: var(--col-black);
+  color: var(--col-white);
+  text-align: center;
+  line-height: 1;
+  padding: 42px 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+/*===============Brands Row===============*/
+
+.brand-logo {
+  position: relative;
+  width: 100%;
+  margin: 40px auto;
+  background: var(--col-banner-bg);
+  padding: 60px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  min-width: 90px;
+  height: 90px;
+  background: var(--col-white);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide1 {
+  min-width: 140px;
+  height: 90px;
+  background: var(--col-white);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*==========Keyframes for infinite scroll==========*/
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*===============Collection Section===============*/
+
+.collections {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.collections .h5-title {
+  color: var(--col-gold);
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-family: DM Sans;
+}
+
+.collections .h2-title {
+  color: var(--col-black);
+  margin-bottom: 60px;
+  font-family: FSP Demo;
+  font-weight: 500;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--col-card-bg);
+  padding: 20px;
+}
+
+.car-img img {
+  width: 100%;
+}
+
+.car-details .h6-title {
+  color: var(--col-lightblack);
+  font-weight: 200;
+  font-family: FSP Demo;
+}
+
+.stars {
+  color: var(--col-gold);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.car-details p {
+  color: var(--col-lightblack);
+  font-weight: 100;
+  font-family: FSP Demo;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 300;
+  font-family: DM Sans;
+  margin-bottom: 15px;
+}
+
+.price .currency {
+  font-size: 18px;
+  vertical-align: super;
+}
+
+.price .unit {
+  font-size: 16px;
+  font-weight: 200;
+  font-family: DM Sans;
+  vertical-align: middle;
+}
+
+.car-details .button {
+  display: inline-block;
+  padding: 14px 80px;
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-family: Inknut Antiqua;
+  border: 2px solid var(--col-gold);
+  color: var(--col-lightblack);
+  transition: 0.3s ease all;
+}
+
+.button:hover {
+  background: var(--col-gold);
+  color: var(--col-white);
+}
+
+.collections .swiper-button-next,
+.collections .swiper-button-prev {
+  top: 46%;
+  color: var(--col-gold);
+  background: var(--col-lightblack);
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  border-radius: 100%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 12px;
+}
+
+.collections .swiper-button-next {
+  right: 0;
+}
+
+.collections .swiper-button-prev {
+  left: 0;
+}
+
+.collections .swiper-button-next:hover,
+.collections .swiper-button-prev:hover {
+  color: var(--col-lightblack);
+  background: var(--col-gold);
+}
+
+/*===============Advantage Section===============*/
+
+.advantage {
+  text-align: center;
+  padding: 50px 0;
+  background: var(--col-dark);
+}
+
+.advantage .h5-title {
+  color: var(--col-gold-light);
+  font-weight: 800;
+  font-family: DM Sans;
+  margin-bottom: 10px;
+}
+
+.advantage .h2-title {
+  font-family: FSP Demo;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.content .col33 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box img.car {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  background: var(--col-card-bg);
+  padding: 35px 20px;
+  max-width: 230px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s ease all;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: var(--col-gold);
+}
+
+.card span {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--col-black);
+  font-family: DM Sans;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--col-black);
+  line-height: 1.4;
+  font-family: DM Sans;
+}
+
+/*===============Services Section===============*/
+
+.services {
+  margin-top: 76px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.services .h5-title {
+  color: var(--col-gold);
+  font-family: DM Sans;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.services .h2-title {
+  color: var(--col-black);
+  margin-bottom: 40px;
+  font-family: FSP Demo;
+  font-weight: 500;
+}
+
+.service-card {
+  background: var(--col-card-bg);
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  background: var(--col-gold-light);
+  color: var(--col-black);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.service-card .h6-title {
+  color: var(--col-black);
+  font-family: FSP Demo;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--col-black);
+  line-height: 1.6;
+  font-family: FSP Demo;
+  font-weight: 200;
+}
+
+.service-btn {
+  display: inline-block;
+  margin-top: 45px;
+  background: var(--col-gold);
+  color: var(--col-white);
+  padding: 25px 42px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.service-btn:hover {
+  background: var(--col-yellow);
+}
+
+/*===============Booking Section===============*/
+
+.booking {
+  background: var(--col-dark);
+  text-align: center;
+  padding: 40px;
+}
+
+.booking .h5-title {
+  color: var(--col-gold);
+  font-family: DM Sans;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.booking .h2-title {
+  margin-bottom: 40px;
+  font-family: Inknut Antiqua;
+  font-weight: 500;
+}
+
+.steps-line {
+  position: relative;
+  width: 100%;
+}
+
+.line-image {
+  width: 100%;
+  display: inline-block;
+}
+
+.steps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.icon-circle i {
+  background: var(--col-gold-light);
+  color: var(--col-black);
+  border-radius: 50%;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease all;
+}
+
+.step-number {
+  font-size: 30px;
+  font-family: DM Sans;
+  color: var(--col-white);
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 16px;
+  font-family: DM Sans;
+  color: var(--col-white);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.icon-circle i:hover {
+  background: var(--col-white);
+  color: var(--col-gold-light);
+  transform: translateY(-5px);
+}
+
+/*===============Testimonials Section===============*/
+
+.testimonials {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.testimonials .h5-title {
+  color: var(--col-gold);
+  margin-bottom: 14px;
+  font-family: DM Sans;
+  font-weight: 800;
+}
+
+.testimonials .h2-title {
+  color: var(--col-black);
+  margin-bottom: 40px;
+  font-family: FSP Demo;
+  font-weight: 500;
+}
+
+.testimonials .swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.testimonials .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background: var(--col-card-bg);
+  border: 1px solid var(--col-gray);
+  border-radius: 10px;
+  padding: 30px 22px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.testimonials .swiper-slide {
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+.testimonials .swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.testimonials .swiper-slide h5 {
+  color: var(--col-black);
+  margin-bottom: 20px;
+  font-family: FSP Demo;
+  font-weight: 500;
+}
+
+.testimonials .stars {
+  color: var(--col-gold);
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.testimonials .swiper-slide p {
+  font-family: FSP Demo;
+  line-height: 1.5;
+  color: var(--col-slide);
+  margin-bottom: 15px;
+}
+
+.testimonials .h6-title {
+  font-family: FSP Demo;
+  font-weight: bold;
+  color: var(--col-gold);
+}
+
+.swiper-pagination-bullet {
+  background: var(--col-gold);
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--col-banner-bg);
+  opacity: 1;
+}
+
+/*===============Book Car Section===============*/
+
+.book-car {
+  padding: 100px 0;
+  background: url(image/Book\ car.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.car-box {
+  text-align: left;
+}
+
+.car-box .h3-title {
+  font-family: Inknut Antiqua;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: var(--col-white);
+}
+
+.car-box p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: Inknut Antiqua;
+  color: var(--col-white);
+}
+
+.car-box .contact {
+  display: flex;
+  gap: 55px;
+}
+
+.btn-gold {
+  display: inline-block;
+  background: var(--col-gold);
+  color: var(--col-white);
+  padding: 25px 30px;
+  font-size: 14px;
+  font-family: Inknut Antiqua;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: var(--col-white);
+  color: var(--col-gold);
+}
+
+.btn-outline {
+  border: 2px solid var(--col-gold-light);
+  color: var(--col-gold-light);
+  background: transparent;
+  padding: 20px 30px;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--col-gold-light);
+  color: var(--col-white);
+}
+
+.book-car .col60 {
+  position: relative;
+}
+
+.explore-box {
+  position: absolute;
+  background: var(--col-gold-light);
+  padding: 70px 40px;
+  text-align: left;
+  max-width: 426px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+.explore-box .h3-title {
+  font-family: Inknut Antiqua;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: var(--col-white);
+}
+
+.explore-box p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: Inknut Antiqua;
+  color: var(--col-white);
+}
+
+.btn-dark {
+  display: inline-block;
+  background: var(--col-dark);
+  color: var(--col-white);
+  padding: 20px 35px;
+  font-size: 24px;
+  font-family: Inknut Antiqua;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background: var(--col-white);
+  color: var(--col-dark);
+}
+
+/*===============Blog Section===============*/
+
+.blog {
+  padding: 80px 0;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-header .h5-title {
+  color: var(--col-gold);
+  font-family: DM Sans;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.blog-header .h2-title {
+  color: var(--col-black);
+  margin-bottom: 40px;
+  font-family: FSP Demo;
+  font-weight: 500;
+}
+
+.big-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.big-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #7a7c7c, var(--col-black));
+  opacity: 0.5;
+}
+
+.big-card:hover {
+  transform: scale(1.05);
+}
+
+.big-card-content {
+  position: absolute;
+  padding: 0 20px;
+  bottom: 88px;
+  left: 30px;
+  z-index: 1;
+}
+
+.big-card-content span {
+  display: block;
+  font-size: 16px;
+  font-family: DM Sans;
+  color: var(--col-white);
+  margin-bottom: 10px;
+}
+
+.big-card-content p {
+  font-size: 24px;
+  font-family: FSP Demo;
+  color: var(--col-white);
+}
+
+.small-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.small-card {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.small-card img {
+  margin-left: 25px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.small-card:hover img {
+  transform: scale(1.05);
+}
+
+.small-card-content span {
+  display: block;
+  font-size: 16px;
+  font-family: DM Sans;
+  color: var(--col-lightblack);
+  margin-bottom: 10px;
+}
+
+.small-card-content p {
+  font-size: 22px;
+  font-family: FSP Demo;
+  color: var(--col-lightblack);
+}
+
+/*===============Host Section===============*/
+
+.host {
+  width: 100%;
+  background: url(image/Host\ Section.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.host .left span {
+  display: block;
+  font-size: 64px;
+  color: var(--col-gold);
+  font-weight: 700;
+  font-family: FSP Demo;
+  margin-top: 20px;
+}
+
+.host .left p {
+  font-size: 128px;
+  font-weight: bold;
+  font-family: DM Sans;
+  color: var(--col-lightblack);
+}
+
+.host .left .h5-title {
+  color: var(--col-host);
+  font-family: DM Sans;
+  margin-bottom: 10px;
+}
+
+.host .btn {
+  display: inline-block;
+  background: var(--col-gold);
+  color: var(--col-white);
+  padding: 25px 40px;
+  font-size: 16px;
+  font-family: Inknut Antiqua;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.host .btn:hover {
+  color: var(--col-gold);
+  background: var(--col-white);
+}
+
+.host .right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woman {
+  position: relative;
+  z-index: 2;
+}
+
+.car {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/*===============Footer Section===============*/
+
+.footer {
+  background: var(--col-footer-bg);
+  padding: 75px 0;
+}
+
+.footer .col20 {
+  padding-left: 5px;
+}
+
+.footer .logo a {
+  display: block;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer .h5-title {
+  color: var(--col-white);
+  font-family: FSP Demo;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: var(--col-card-bg);
+  font-family: FSP Demo;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.footer ul li {
+  margin-bottom: 20px;
+}
+
+.footer ul li a {
+  color: var(--col-white);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer ul li i {
+  color: var(--col-gold);
+  margin-right: 10px;
+}
+
+.footer ul li a:hover {
+  color: var(--col-gold);
+  padding-left: 8px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: var(--col-white);
+  background: var(--col-gold);
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:nth-child(1) {
+  padding: 10px 18px;
+}
+
+.social-icons a:hover {
+  color: var(--col-gold);
+  background: var(--col-white);
+}
+
+/* ================= Responsive Media Queries ================= */
+
+/* ================== Responsive ================== */
+
+/* ------------ 1024px (Small desktops) ------------ */
+@media (max-width: 1024px) {
+  .collections .h2-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .car-details .button {
+    padding: 12px 60px;
+    font-size: 14px;
+  }
+
+  .big-card::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    border-radius: 25px;
+  }
+}
+
+/* ----------- 991px (Tablet Landscape) ----------- */
+@media (max-width: 991px) {
+  .col60,
+  .col50,
+  .col40,
+  .col33,
+  .col30,
+  .col25,
+  .col20 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background-color: var(--col-gold);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px;
+    z-index: 2;
+  }
+
+  .navlist li {
+    margin: 10px;
+  }
+
+  .navlist.active {
+    display: flex;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .about-us {
+    margin-top: 150px;
+  }
+
+  .about-us .col50 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .image-box1 {
+    width: 80%;
+    height: 90%;
+  }
+
+  .swiper-slide {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .collections .swiper {
+    padding-bottom: 40px;
+  }
+
+  .collections .h2-title {
+    font-size: 26px;
+  }
+
+  .collections .swiper-button-next,
+  .collections .swiper-button-prev {
+    top: 55%;
+  }
+
+  .price {
+    font-size: 26px;
+  }
+
+  .price span {
+    font-size: 14px;
+  }
+
+  .car-details .button {
+    padding: 12px 50px;
+    font-size: 14px;
+  }
+
+  .service-card {
+    margin-bottom: 10px;
+  }
+
+  .advantage .col33 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .advantage .col33 .card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .book-car {
+    padding: 80px 0;
+  }
+
+  .book-car .col40 {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .book-car .col60 {
+    flex: 0 0 60%;
+    max-width: 60%;
+    position: static;
+  }
+
+  .explore-box {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 30px;
+    max-width: 90%;
+    text-align: center;
+    margin-left: 50px;
+  }
+
+  .car-box {
+    text-align: center;
+  }
+
+  .car-box .contact {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .host .col50 {
+    margin-bottom: 20px;
+  }
+}
+
+/* ------------ 768px (Tablets portrait) ------------- */
+@media (max-width: 768px) {
+  .col60,
+  .col50,
+  .col40,
+  .col33,
+  .col30,
+  .col25,
+  .col20 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #rentalForm .col50 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about-us .col50 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .image-box1 {
+    width: 85%;
+  }
+
+  .about-us .col50 .h5-title {
+    margin-bottom: 10px;
+  }
+
+  .about-us .col50 .h2-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .about-us .col50 p {
+    margin-bottom: 10px;
+  }
+
+  .about-us .col25 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .collections {
+    margin: 60px 0;
+  }
+
+  .collections .h2-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .collections .swiper-button-next,
+  .collections .swiper-button-prev {
+    top: 50%;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .car-details p {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+
+  .car-details .button {
+    padding: 12px 40px;
+    font-size: 13px;
+  }
+
+  .advantage .col33 .card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .blog .col50 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .big-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .big-card::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .big-card-content {
+    width: 50%;
+    left: 25%;
+    text-align: center;
+  }
+
+  .book-car .col40 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .book-car .col60 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .explore-box {
+    position: relative;
+    margin-left: 30px;
+  }
+
+  .host .col50 {
+    text-align: center;
+  }
+
+  .host .col50 p {
+    font-size: 60px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .footer .col40 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer .col40 .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer .col20 {
+    text-align: center;
+  }
+}
+
+/* ----------- 600px (Tablet Portrait / Large Mobile) ----------- */
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-text h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .banner-text p {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .about-us {
+    margin-top: 100px;
+  }
+
+  .image-box1 {
+    width: 100%;
+  }
+
+  .btn-gold,
+  .btn-outline,
+  .btn-dark,
+  .service-btn,
+  .read-btn {
+    display: inline-block;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .swiper-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .search-box .form-group {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-box .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .collections .h2-title {
+    font-size: 22px;
+  }
+
+  .advantage .col33 {
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .about-us .col50 {
+    text-align: center;
+  }
+
+  .booking .h2-title {
+    font-size: 30px;
+  }
+
+  .icon-circle i {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .step-number {
+    font-size: 24px;
+  }
+
+  .step-desc {
+    font-size: 12px;
+  }
+
+  .big-card-content p {
+    font-size: 18px;
+  }
+
+  .small-card-content p {
+    font-size: 16px;
+  }
+
+  .service-card {
+    margin-bottom: 10px;
+  }
+}
+
+/* ---------- 480px (Medium phones) -----------*/
+@media (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .about-us {
+    margin-top: 90px;
+  }
+
+  .collections .h2-title {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .car-details p {
+    font-size: 13px;
+  }
+
+  .car-details .button {
+    padding: 10px 30px;
+    font-size: 12px;
+  }
+
+  .booking .h2-title {
+    font-size: 24px;
+  }
+
+  .big-card-content {
+    width: 80%;
+    left: 10%;
+    text-align: center;
+  }
+}
+
+/* ----------- 420px (Small Mobile) ----------- */
+@media (max-width: 420px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2,
+  .h2-title {
+    font-size: 24px;
+  }
+
+  h3,
+  .h3-title {
+    font-size: 20px;
+  }
+
+  h4,
+  .h4-title {
+    font-size: 18px;
+  }
+
+  .about-us {
+    margin-top: 60px;
+  }
+
+  .car-box p {
+    font-size: 16px;
+  }
+
+  .explore-box {
+    margin-left: 20px;
+  }
+
+  .explore-box p {
+    font-size: 16px;
+  }
+
+  .btn-dark {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
+/* ----------- 375px (Extra Small Mobile) ----------- */
+@media (max-width: 375px) {
+  .banner-text h1 {
+    font-size: 26px;
+  }
+
+  .banner-text p {
+    font-size: 14px;
+  }
+
+  .search-box {
+    padding: 20px 10px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+  }
+
+  .form-group input {
+    font-size: 12px;
+  }
+
+  .about-us {
+    margin-top: 40px;
+  }
+
+  .collections .h2-title {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .price span {
+    font-size: 12px;
+  }
+
+  .icon-circle i {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .step-number {
+    font-size: 20px;
+  }
+
+  .step-desc {
+    font-size: 8px;
+  }
+
+  .car-details .button {
+    padding: 10px 25px;
+    font-size: 12px;
+  }
+
+  .big-card-content {
+    width: 100%;
+    left: 2%;
+    text-align: center;
+  }
+
+  .small-card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ----------- 320px (Very Small Devices) ----------- */
+
+@media (max-width: 320px) {
+  .banner-text h1 {
+    font-size: 24px;
+  }
+
+  h2,
+  .h2-title {
+    font-size: 18px;
+  }
+
+  h3,
+  .h3-title {
+    font-size: 16px;
+  }
+
+  .banner {
+    min-height: 500px;
+    padding-top: 100px;
+  }
+
+  .banner-text p {
+    font-size: 12px;
+  }
+
+  .about-us {
+    margin-top: 150px;
+  }
+
+  .btn-gold,
+  .btn-outline,
+  .btn-dark {
+    font-size: 12px;
+    padding: 10px 14px;
+  }
+
+  .car-box p,
+  .explore-box p,
+  .service-card p,
+  .footer p {
+    font-size: 12px;
+  }
+
+  .social-icons a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .collections {
+    margin: 40px 0;
+  }
+
+  .collections .h2-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .car-details p {
+    font-size: 12px;
+  }
+
+  .stars {
+    font-size: 14px;
+  }
+
+  .car-details .button {
+    padding: 8px 20px;
+    font-size: 11px;
+  }
+
+  .big-card {
+    position: relative;
+  }
+}
